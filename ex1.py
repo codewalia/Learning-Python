@@ -1,11 +1,17 @@
-print "i will now count my chicekn"
-#simple o/p
-print "Hens",25 + 30/6
-#will print hens and in the same line it will print 25 + 5 = 30
-print "roosters",100- 25 * 3 % 4
-#it will print roosters with a number in the smae line
+#Defining the variables
 
-print "now i will count the eggs"
+cars = 100
+space_in_a_car = 4.0
+drivers = 30
+passengers = 90
+cars_not_driven = cars - drivers
+cars_driven = drivers
+carpool_capacity = cars_driven * space_in_a_car
+average_passengers_per_car = passengers/cars_driven
 
-print 3 + 2 + 1 - 5 + 4 % 2 - 1/4 + 6
-
+#printing the variables
+print "there are", cars , "cars available"
+print "there are only" , drivers, "drivrs avlble"
+print "there will be ", cars_not_driven, "empty cars today"
+print " we can transport" , carpool_capacity, "people today"
+print "we have ", passengers, "to car pool today"
