@@ -1,18 +1,24 @@
-#more vairabes and using formatters
-my_name = " Walia, Ankur"
-my_age = 24
-my_height = 6 #ft
-my_weight = 68 #kg
-my_eyes = "black"
-my_teeth = "White"
-my_hair = "brown"
+#little complex usage of strings
 
+x = "there are %d types of people." % 10
+binary = "binary"
+do_not = "don't"
+y = "those who know %s and those who %s." % (binary, do_not)
 
-#using those variables
+print x
+print y
 
-print "Lets talk about %s" % my_name
-print " he is %d ft tall" % my_height
-print "he is %d kg heavy" %my_weight, " thats a lil less"
-print "he is got %s eyes and %s hair" % (my_eyes, my_hair)
-#the tricky line
-print "if i add %d, %d, and %d i get %r" %(my_age, my_height, my_weight, my_age + my_height + my_weight)
+print "i said : %r." % x
+# r is replaced by 'x' 
+print "i also said:: '%s'." %y
+
+hillarious = False
+joke_evaluation = "isn't that joke so funny?! %r"
+
+# % r already embedded in the string
+print joke_evaluation % hillarious
+#since %r was already in the string this no need to use it agian here , so %r is replaced by hillaripous
+w = "this is left side of..."
+e  = " a string with a right side."
+
+print w + e
