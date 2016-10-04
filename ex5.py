@@ -7,13 +7,25 @@ from sys import argv
 
 
 
-script , first, second, third = argv
+script , user_name = argv
+prompt = '>'
 
-#unpacking the argument argv and splitting it into 4 variables
+print "Hi %s, i'm the %s script" % (user_name, script)
+print "i'd like to ask u some question"
+print "do u like me %s?" % user_name
+likes = raw_input(prompt)
 
-print "the script is called ", script
-print "first variable is ", first
-print "second variable is ", second
-print "third variable is " , third
+print "where do u live"
+lives = raw_input(prompt)
+
+print "what kind of pc do u have?"
+computer = raw_input(prompt)
+
+print"""
+alright, %s, u said %s about
+liking me and u live in %s,
+and u have a %s computer nice!
+""" % (user_name, likes, lives, computer)
+
 
 
