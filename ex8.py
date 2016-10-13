@@ -1,36 +1,31 @@
-#writing and reading files
-
+#more file operations
 from sys import argv
+from os.path import exists
+#imporitng modules
 
-script, filename = argv
+script, from_file, to_file = argv
 
-print "we are going to earse %r" % filename
-print "if u dont want that hit ctrl + c (^c)"
-print "if u want that, press enter"
+#unpacking argv into three vars
 
-raw_input("?")
+print "copying from %s to %s" % (from_file, to_file)
 
-print "opening the file..."
-target = open(filename, 'w')
+#WE COULD DO THESE TWO ON ONE LINE TOO, HOW?
 
-print "truncating the file, goodbye"
-target.truncate()
+in_file  = open(from_file)
+indata = in_file.read()
 
-print "now m going to ask u three lines"
+#INDATA = OPEN(FROM_FILE).READ()
 
-line1  = raw_input("line 1")
-line2  = raw_input("line 2")
-line3 = raw_input("line 3")
+print "THE INPUT FILE IS %d bytes long" % len(indata)
 
-print " i am going to write these to the file"
+print "does the output file exists? %r" % exists(to_file)
+print "ready, hit RETURN to cntinue, ctrl + c to abort."
+raw_input()
 
-target.write(line1)
-target.write("\n")
-target.write(line2)
-target.write("\n")
-target.write(line3)
-target.write("\n")
+out_file = open(to_file, 'w')
+out_file.write(indata)
 
-print "and finally, we clsoe it"
-target.close()
+print "alright, done"
 
+out_file.close()
+in_file.close()
